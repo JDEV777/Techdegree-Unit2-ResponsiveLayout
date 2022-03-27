@@ -1,0 +1,299 @@
+/*-----------------------------------Base Styles--------------------------------------*/
+* {
+    box-sizing: border-box; 
+    margin: 0; /*This will remove default margin and padding*/
+    padding: 0;
+}
+html, body {height: 100%;} /*Needed for the margin-top: auto; and footer*/
+
+body {
+/*The max-width has to be done for the body horz-margin to work. The body takes the width of the full screen if you don't set it. The Body margin default is 8px. The auto perfectly centers it. Max-width allows the width to flex below 1024px.*/
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+ul {
+    list-style: none; /*removes degault style (bullet points)*/
+    padding-left: 0; /*default ul has padding to indent*/
+}
+
+a { /*removes default a-link tags that are underlined*/
+    text-decoration: none;    
+}
+
+img {  /*This is what was causing issues with mobile screen zooming out to far. Imgs too big.*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;    
+}
+
+h2 {
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+address {font-style: normal;}
+
+hr {
+    height: 1px;
+    width: 93%;
+    margin: auto;
+    background-color: rgb(71, 71, 71);
+    border: none;
+}
+
+/*----------------------------------Typography----------------------------------------*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav { /*Left the h in the nav.  You can include a font-family in a parent element.*/
+    font-weight: 400;
+    letter-spacing: .05em;
+    background-color: #5c2e7a;
+    padding: 25px;
+}
+
+p {
+    text-align: center;  /*RECENT EDIT*/
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+h1 {font-size: xx-large;}
+
+h2 {text-align: center;} /*RECENT EDIT*/
+
+h3 {padding-bottom: 28px;}
+
+
+
+/*-------------------------------------Nav-Header-------------------------------------*/
+h1, .top-navigation {   /*DRY*/
+    text-align: center;
+    font-weight: bolder;
+}
+.top-navigation, .top-navigation li { /*This may already be a dafault*/
+    width: 100%;
+}
+h1 a, .top-navigation a {color: #000;} /*a needed to change color*/
+
+.top-navigation {
+    margin-top: 30px; /*more spacing*/
+}
+.top-navigation li:hover {
+    background-color: rgb(192, 192, 192);
+}
+
+.top-navigation li { /*spaces the top nav vertically*/
+    padding: 10px 0;
+    margin: 5px auto;
+    background-color: #fff;
+}
+
+.top-navigation a {text-transform: uppercase;}
+
+nav {margin-bottom: 35px;} /*RECENT EDIT*/
+
+img {
+    margin-bottom: 30px;
+}
+
+.profileimage {
+    width: 70%;
+    height: auto;
+}
+
+.profile-summary {
+    padding: 10px;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #08293a;
+}
+
+/*--------------------------------------Main------------------------------------------*/
+
+
+.portfolio-container {
+    max-width: 1100px;  /*?*/
+    padding: 10px;
+    margin: 0 auto;  
+}
+
+.col {
+    margin: 10px;
+    margin-bottom: 35px;   
+    min-height: 250px;    
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.box-1 {
+    background-color: #093145;
+}
+.box-2 {
+    background-color: #3C6478;
+}
+.box-3 {
+    background-color: #107896;
+}
+.box-4 {
+    background-color: #829356;
+}
+.box-5 {
+    background-color: #C2571A;
+}
+.box-6 {
+    background-color: #9A2617;
+}
+
+.skillssummary {
+    width: 297.969px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #08293a;    
+}
+
+.contactsummary {
+    width: 297.969px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #08293a;
+}
+
+.phone {margin-bottom: 20px;}
+
+.email {margin-bottom: 60px;}
+
+/*--------------------------------------Footer----------------------------------------*/
+body {
+    display: flex;  /*The flex is needed for the margin-top:auto for the sticky footer*/
+    flex-direction: column; 
+    color: black;
+    background-color: #4b7b97;
+}
+
+a {
+    text-transform: uppercase;
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 30px 20px;
+    height: 100px;
+    background-color: #4b7b97;
+}
+
+.footername {
+    padding-bottom: 0px; 
+    font-size: 14px;
+}
+
+.mobile-only {font-size: 14px;}
+
+.non-mobile {display: none;}  /*Done for mobile first reasons (for screen sizes 767px and below in this case). Used to hide the rest of the footer list*/
+
+.footerlinks a:hover {color: rgb(71, 67, 67);}
+
+@media (min-width: 768px) {   /*This allows the footer to adjust between mobile and non-mobile*/
+    .mobile-only {display: none;}
+    
+    .non-mobile {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+}
+
+/*------------------------------------Media Queries-----------------------------------*/
+@media (min-width: 768px) {
+    .top-navigation {margin-top: 18px;}   
+
+    .top-navigation li {
+        display: inline-block; /*With inline-block width needs to be less than 100%*/
+        width: auto;
+        margin-right: 45px;
+        background-color: transparent; /*To remove white background in li*/
+    }
+
+    .top-navigation li:last-child {margin-right: 0;} /*To make more centered*/
+
+    .top-navigation a {color: #fff;}
+
+    .top-navigation a:hover {color: rgb(179, 170, 170);}
+
+    .top-navigation li:hover {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .image-container {display: flex;}
+    
+    .profileimage {
+        width: 38%;
+        height: auto;
+        order: 1;
+        margin-right: 33px;
+    }
+
+    .profile-summary {        
+        text-align: left;  
+        padding-top: 17px;
+            
+    }
+
+    .skillssummary {
+        width: 460.812px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contactsummary {
+        width: 460.812px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    nav {   /*flex container*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top-navigation, .top-navigation li {
+        width: initial; /*removes the 100% width*/
+        margin-bottom: 0; /*centers the h1 and li*/
+    }
+    .profile-summary {margin-right: 55px;}
+
+}
+
+@media (min-width: 768px) {
+    .portfolio-container {
+        display: flex; 
+        flex-wrap: wrap; /*Allows width or flex-basis boxes to wrap into a new row once their combined width/flex-basis is 100%. Flex-basis is basically the width for flex children.*/
+    }
+    .col {flex-basis: calc(50% - 20px);} /*Removes the extra 20px so two .col can wrap within 1024px*/
+
+}
+
+@media (min-width: 1024px) {
+    .col {flex-basis: calc(33.333% - 20px);} /*To wrap in thirds.*/
+}

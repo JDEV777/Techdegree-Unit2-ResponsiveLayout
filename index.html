@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">    
+    <Meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>My Portfolio</title>
+    
+</head>
+
+<Body>    
+    <Header>
+        
+        <nav>
+            <h1>Student Name</h1>
+            <ul class="top-navigation">                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#portfolio-title">Portfolio</a></li>
+                <li><a href="#skills-title">Skills</a></li>
+                <li><a href="#contact-title">Contact</a></li>                
+            </ul>
+        </nav>
+
+        <div class="image-container"> 
+            <img class="profileimage" src="images/responsive-layout-profile.png" alt="Picture of Student">
+            <p class="profile-summary">Hi! I'm a font-end developer who loves responsive design and css. I recently finished learning front-end web development at Treehouse and am excited to put all my skills to use!</p>
+        </div>
+        
+    </Header>
+    <main>
+        <h2 id="portfolio-title">Portfolio</h2>
+
+        <section class="portfolio-container">
+            <div class="col box-1"> <!--The space between col and box-1 makes it two classes-->
+                <img src="images/portfolio-1.png" alt="Picture of Marketing Page">
+                <h3>Marketing Page</h3>
+                <p>This project shows the front page of a marketing website meant for a specific business I'm interested&nbsp;in.</p>
+            </div> <!--&nbsp; stands for non-breaking space.  Prevents a word from being seperated into a new line-->
+            <div class="col box-2">
+                <img src="images/portfolio-2.png" alt="Picture of Search Page">
+                <h3>Search Page</h3>
+                <p>This searches through a specific database to find information that the user is trying to look up.</p>
+            </div>
+            <div class="col box-3">
+                <img src="images/portfolio-3.png" alt="Picture of Travel App">
+                <h3>Travel App</h3>
+                <p>This project compares travel times basd on differnt transporation methods and tells you the best one.</p>
+            </div>
+            <div class="col box-4">
+                <img src="images/portfolio-4.png" alt="Picture of Map">
+                <h3>Map of Favorite Spots</h3>
+                <p>This project uses mapping apis to plot points for my favorite spots in the city for a do-it-yourself walking tour.</p>
+            </div>
+            <div class="col box-5">
+                <img src="images/portfolio-5.png" alt="Picture of Photo Gallery">
+                <h3>Photo Gallery</h3>
+                <p>This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.</p>
+            </div>
+            <div class="col box-6">
+                <img src="images/portfolio-6.png" alt="Picture of Calculator">
+                <h3>Calculator</h3>
+                <p>Someone can enter the numbers they want, and press the big blue button and get the result.</p>
+            </div>
+        </section>  
+
+        <section class=skills-section>
+            <h2 id="skills-title">Skills</h2>
+            <p class="skillssummary">Fundamental skills in HTML, CSS, and web development. User feedback and support expert.</p>          
+        </section>
+
+        <section class=contact-section>
+            <h2 id="contact-title">Contact</h2>
+            <p class="contactsummary">If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
+            
+            <address>
+                <p class="phone">Phone:    <b>+1 (111) 555-1234</b></p>
+                <p class="email">Email:   <b>email@yoursite.com</b></p>
+            </address>
+        </section>       
+
+        <hr> <!-- line -->
+    </main>
+        
+    <Footer>        
+        <h3 class="footername">Student Name</h3>
+        <Ul class="footerlinks">
+            <li class="mobile-only"><a href="#">Back To Top</a></li>
+            <li class="non-mobile"><a href="index.html">Home</a></li>
+            <li class="non-mobile"><a href="#portfolio-title">Portfolio</a></li>
+            <li class="non-mobile"><a href="#skills-title">Skills</a></li>
+            <li class="non-mobile"><a href="#contact-title">Contact</a></li>
+        </Ul>        
+    </Footer>
+
+</Body>
+
+</html>
