@@ -267,6 +267,12 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
+
+    .portfolio-container {
+        display: flex; 
+        flex-wrap: wrap; /*Allows width or flex-basis boxes to wrap into a new row once their combined width/flex-basis is 100%. Flex-basis is basically the width for flex children.*/
+    }
+    .col {flex-basis: calc(50% - 20px);} /*Removes the extra 20px so two .col can wrap within 1024px*/
     
 }
 
@@ -283,17 +289,6 @@ footer {
     }
     .profile-summary {margin-right: 55px;}
 
-}
-
-@media (min-width: 768px) {
-    .portfolio-container {
-        display: flex; 
-        flex-wrap: wrap; /*Allows width or flex-basis boxes to wrap into a new row once their combined width/flex-basis is 100%. Flex-basis is basically the width for flex children.*/
-    }
-    .col {flex-basis: calc(50% - 20px);} /*Removes the extra 20px so two .col can wrap within 1024px*/
-
-}
-
-@media (min-width: 1024px) {
     .col {flex-basis: calc(33.333% - 20px);} /*To wrap in thirds.*/
+
 }
